@@ -16,9 +16,7 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
 	padding: 0;
-	border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
@@ -32,7 +30,7 @@ body {
 	line-height: 1;
 }
 ol, ul {
-	list-style: none;
+	list-style: circle;
 }
 blockquote, q {
 	quotes: none;
@@ -64,3 +62,156 @@ h1, h2, h3, h4, h5 {
 }
 
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html, body {
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Your code starts here! */
+
+.main {
+	width: 70%;
+	margin: 0 auto;
+}
+.container {
+	display: flex;
+}
+/* header styles */
+nav.container {
+	justify-content: space-between;
+	align-items: center;
+	margin: 30px 0;
+
+}
+
+div.container {
+	flex-flow: row wrap;
+}
+div.title {
+	width: 50%;
+}
+.container .title {
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+}
+.title img {
+	width: 60%;
+}
+nav a {
+	color: gray;
+	text-decoration: none;
+
+}
+
+hr {
+	margin: 20px 0;
+	max-width: 100%;
+}
+
+h1 {
+	font-size: 4em;
+	text-align: center;
+}
+.container.title a {
+	border: 1px solid gray;
+	padding: 2px 30px;
+}
+/* main area styles */
+section.container {
+	justify-content: space-between;
+	margin: 20px 0;
+	flex-wrap: wrap;
+}
+
+div.section-one {
+	width: 49%;
+}
+div.section-two {
+	width: 32%;
+}
+.container.center {
+	justify-content: center;
+
+}
+
+.middle-img {
+	max-width: 100%;
+}
+/* footer styles */
+
+footer {
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+/* services page styles */
+.header-img {
+	display: flex;
+	justify-content: center;
+}
+
+.services-header-img {
+	max-width: 100%;
+}
+
+
+
+.container.services {
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
+.serviceType {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 48%;
+	min-height: 210px;
+	border: 1px solid black;
+	background-color: #f4f3f4;
+	padding: 20px;
+	margin-bottom: 25px;
+}
+
+.serviceType a {
+	width: 30%;
+	text-decoration: none;
+	text-align: center;
+	color: black;
+	padding: 10px 15px;
+	border: 1px solid black;
+	border-radius: 6%;
+	font-size: 12px;
+	background-color: white;
+}
+
+ul li {
+	list-style-type: disc;
+	list-style-type: square;
+	list-style-position: inside;
+}
+
+.facts-section {
+	width: 45%;
+}
+
+.facts-section ul {
+	margin-top: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100px;
+}
